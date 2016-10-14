@@ -1,5 +1,7 @@
 header {
   prm-topbar {  
+    visibility: hidden;
+
     // Add shadow to the topbar.
     @include md-whiteframe-5dp;
     // Makes the shadow of the topbar appear.
