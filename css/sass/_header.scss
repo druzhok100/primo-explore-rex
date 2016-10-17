@@ -1,47 +1,78 @@
 header {
+  rex-toolbar md-toolbar {
+    z-index: 10;
+    
+    color: $topbar-text-color;
+    background-color: white;
+
+    .md-button {
+      height: 100%;  
+      padding: 0 0.75em;
+      max-width: 12em;
+      font-size: .65em;
+      letter-spacing: 0.03em;          
+      font-weight: 600 !important;
+      color: inherit;
+    }
+  
+  }
+  
+  rex-main-menu {
+    height: 100%;    
+  }
+
+  .rex-logo {
+    min-width: 100px;
+  }
+
+  // The default toolbar is hidden.
   prm-topbar {  
     visibility: hidden;
-
-    // Add shadow to the topbar.
-    @include md-whiteframe-5dp;
-    // Makes the shadow of the topbar appear.
-    z-index: 1;
-
-    .top-nav-bar {
-      background-color: white;
-      
-      .md-button.button-over-dark, .md-button {  
-        color: $topbar-text-color;
-        
-        &:hover:not([disabled]) {
-          color: $topbar-text-color;
-          background-color: $topbar-button-background-color;         
-        }
-      }
-
-
-      .user-name {
-        color: $icon-color;
-      }
-      
-      .user-language {
-        color: $topbar-text-color;
-      }
-    }
-
-    /*START: Display clickable logo*/
-
-    prm-logo div.product-logo {
-      display:none;
-    }
-
-    prm-logo div.product-logo-local {
-      display: flex;
-    }
-     /*END: Display clickable logo*/
-
-
   }
+
+  // prm-topbar {  
+  //   visibility: hidden;
+
+  //   // Add shadow to the topbar.
+  //   @include md-whiteframe-5dp;
+  //   // Makes the shadow of the topbar appear.
+  //   z-index: 1;
+
+  //   .top-nav-bar {
+  //     background-color: white;
+      
+  //     .md-button.button-over-dark, .md-button {  
+  //       color: $topbar-text-color;
+        
+  //       &:hover:not([disabled]) {
+  //         color: $topbar-text-color;
+  //         background-color: $topbar-button-background-color;         
+  //       }
+  //     }
+
+
+  //     .user-name {
+  //       color: $icon-color;
+  //     }
+      
+  //     .user-language {
+  //       color: $topbar-text-color;
+  //     }
+  //   }
+
+  //   /*START: Display clickable logo*/
+
+  //   prm-logo div.product-logo {
+  //     display:none;
+  //   }
+
+  //   prm-logo div.product-logo-local {
+  //     display: flex;
+  //   }
+  //    /*END: Display clickable logo*/
+
+
+  // }
 
   .md-button.button-confirm {
     color: $icon-color;

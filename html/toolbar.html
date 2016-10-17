@@ -1,12 +1,31 @@
-<md-toolbar>
+<md-toolbar md-whiteframe="5">
   <div class="md-toolbar-tools">
-    <span>My App's Title</span>
-
-    <!-- fill up the space between left and right area -->
-    <span flex></span>
-
-    <md-button>
-      Right Bar Button
+  
+    <md-button class="rex-logo">
+      <img ng-src="{{$ctrl.logoLink}}" ng-click="$ctrl.navigateToHomePage()"/>
     </md-button>
+    
+    <div flex="50" hide-xs></div>
+
+    <rex-main-menu flex="50" hide-xs layout="row" layout-align="center center" class="buttons-group">
+      
+      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.library_search" aria-label="TODO" ng-click="$ctrl.navigateToHomePage()">
+      </md-button>
+
+      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.kontakt_biblioteket">
+      </md-button>
+
+      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.fandt_du_ikke_det_du_søgte?">
+      </md-button>
+      
+    </rex-main-menu>
+
+    <div flex="50" flex-xs="100"></div>
+    <div>
+      <a ng-click="$ctrl.navigateToHomePage()">
+        <img ng-src="{{$ctrl.logoLink}}"/>
+      </a>
+    </div>
+
   </div>
 </md-toolbar>
