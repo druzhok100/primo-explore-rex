@@ -1,26 +1,20 @@
 <md-toolbar md-whiteframe="5">
   <div class="md-toolbar-tools">
   
-    <md-button class="rex-logo">
+    <md-button class="rex-logo" alt="Home Page" aria-label="Home Page">
       <img ng-src="{{$ctrl.logoLink}}" ng-click="$ctrl.navigateToHomePage()"/>
     </md-button>
     
     <div flex="50" hide-xs></div>
 
     <rex-main-menu flex="50" hide-xs layout="row" layout-align="center center" class="buttons-group">
-      
-      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.library_search" aria-label="TODO" ng-click="$ctrl.navigateToHomePage()">
-      </md-button>
-
-      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.kontakt_biblioteket">
-      </md-button>
-
-      <md-button class="zero-margin multi-line-button" translate="mainmenu.label.fandt_du_ikke_det_du_søgte?">
-      </md-button>
-      
+      <md-button class="zero-margin multi-line-button" translate="{{item.i18n_label}}" aria-label="{{item.label}}" ng-click="$ctrl.navigateTo(item.url)" ng-repeat="item in $ctrl.menuList">
+        {{item.label}}
+      </md-button>  
     </rex-main-menu>
 
     <div flex="50" flex-xs="100"></div>
+
     <div>
       <a ng-click="$ctrl.navigateToHomePage()">
         <img ng-src="{{$ctrl.logoLink}}"/>
