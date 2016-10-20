@@ -6,44 +6,53 @@ body {
 md-content md-card.default-card, md-content.md-primoExplore-theme md-card.default-card {
   background-color: #F8F8F8; }
 
-header {
-  /*START: Hovered topbar */
-  /*END: Hovered topbar */ }
-  header rex-toolbar md-toolbar {
-    z-index: 10;
-    color: rgba(0, 0, 0, 0.65);
+.rotate-25 {
+  transform: rotate(25deg); }
+
+header .md-button.button-confirm {
+  color: #47A447; }
+header md-toolbar {
+  z-index: 10;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: white; }
+  header md-toolbar .md-button {
+    height: 100%;
+    padding: 0 0.75em;
+    max-width: 12em;
+    font-size: 0.65em;
+    letter-spacing: 0.03em;
+    font-weight: 600 !important;
+    color: inherit; }
+  header md-toolbar md-input-container {
+    height: 100%;
+    padding: 0 0.75em;
+    max-width: 12em;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    font-weight: 400 !important;
+    color: inherit; }
+    header md-toolbar md-input-container > md-icon {
+      top: 4px; }
+    header md-toolbar md-input-container.md-icon-left {
+      padding-left: 27px;
+      padding-right: 0; }
+    header md-toolbar md-input-container:after {
+      background-color: inherit; }
+    header md-toolbar md-input-container ._md-select-value ._md-select-icon {
+      width: 18px; }
+header rex-main-menu {
+  height: 100%; }
+header .rex-logo {
+  min-width: 100px; }
+header prm-search-bar {
+  background-color: white; }
+  header prm-search-bar .search-switch-buttons .md-button.switch-to-advanced, header prm-search-bar .search-switch-buttons .md-button.switch-to-simple {
+    color: #45AAB4; }
+  header prm-search-bar .advanced-search-backdrop {
     background-color: white; }
-    header rex-toolbar md-toolbar .md-button {
-      height: 100%;
-      padding: 0 0.75em;
-      max-width: 12em;
-      font-size: .65em;
-      letter-spacing: 0.03em;
-      font-weight: 600 !important;
-      color: inherit; }
-  header rex-main-menu {
-    height: 100%; }
-  header .rex-logo {
-    min-width: 100px; }
-  header prm-topbar {
-    visibility: hidden; }
-  header .md-button.button-confirm {
-    color: #47A447; }
-  header prm-user-area md-fab-toolbar.md-is-open md-fab-trigger .md-fab-toolbar-background, header prm-user-area md-fab-toolbar.md-is-open md-fab-trigger ._md-fab-toolbar-background {
-    background-color: #d0d0d0 !important; }
-  header prm-user-area md-fab-toolbar .md-fab-action-item md-input-container, header prm-user-area md-fab-toolbar .md-fab-action-item md-input-container md-select, header prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled]), header prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled]) md-select {
-    color: rgba(0, 0, 0, 0.65); }
-  header prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled]) {
-    background-color: #E7E7E7; }
-  header prm-icon md-icon,
-  header prm-icon md-icon.md-primoExplore-theme {
-    color: rgba(0, 0, 0, 0.65) !important; }
-  header prm-search-bar {
-    background-color: white; }
-    header prm-search-bar .search-switch-buttons .md-button.switch-to-advanced, header prm-search-bar .search-switch-buttons .md-button.switch-to-simple {
-      color: #45AAB4; }
-    header prm-search-bar .advanced-search-backdrop {
-      background-color: white; }
+header prm-topbar {
+  visibility: hidden; }
 
 prm-search-result-list md-list-item, prm-search-result-list .results-title {
   background-color: #F8F8F8; }

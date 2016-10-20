@@ -1,0 +1,7 @@
+<md-input-container>
+  <md-icon md-svg-icon="action:ic_language_24px"></md-icon>
+  <md-select ng-model="$ctrl.locale" ng-change="$ctrl.languageChanged()">
+    <md-option ng-value="locale" ng-repeat="locale in $ctrl.locales" translate="mypref.language.option.{{locale}}">
+    </md-option>
+  </md-select>
+</md-input-container>

@@ -1,5 +1,11 @@
 header {
-  rex-toolbar md-toolbar {
+
+  .md-button.button-confirm {
+    color: $icon-color;
+  }
+
+
+  md-toolbar {
     z-index: 10;
     
     color: $topbar-text-color;
@@ -9,14 +15,71 @@ header {
       height: 100%;  
       padding: 0 0.75em;
       max-width: 12em;
-      font-size: .65em;
+      font-size: 0.65em;
       letter-spacing: 0.03em;          
       font-weight: 600 !important;
       color: inherit;
     }
+    
+    md-input-container {
+      height: 100%;  
+      padding: 0 0.75em;
+      max-width: 12em;
+      font-size: 0.65em;
+      text-transform: uppercase;
+      letter-spacing: 0.005em;          
+      font-weight: 400 !important;
+      color: inherit; 
+      
+      &>md-icon {
+        top: 4px;
+      }
+
+      &.md-icon-left {
+        padding-left: 27px;
+        padding-right: 0;
+      }
+
+      &:after {
+        background-color: inherit;
+      }
+
+      ._md-select-value ._md-select-icon {
+        width: 18px;
+      } 
+    }
+
+    // md-input-container {
+    //   margin: 0;
+    //   padding: 0 1em;
+    //   height: 100%;
+    //   // text-transform: uppercase;
+    //   font-size: .65em;
+    //   &:after {
+    //       display: none;
+    //   }
+
+    //   md-select {
+    //     height: 100%;
+    //     .md-select-value {
+    //       margin: 0;
+    //       padding: 0;
+    //       border: none !important;
+    //       span {
+    //         top: -3px;
+    //         position: inherit;
+    //       }
+    //     }
+    //     .md-select-placeholder {
+    //       color: inherit;
+    //       border-bottom: none;
+    //     }
+    //   }
+    // }
+
   
   }
-  
+
   rex-main-menu {
     height: 100%;    
   }
@@ -25,92 +88,6 @@ header {
     min-width: 100px;
   }
 
-  // The default toolbar is hidden.
-  prm-topbar {  
-    visibility: hidden;
-  }
-
-  // prm-topbar {  
-  //   visibility: hidden;
-
-  //   // Add shadow to the topbar.
-  //   @include md-whiteframe-5dp;
-  //   // Makes the shadow of the topbar appear.
-  //   z-index: 1;
-
-  //   .top-nav-bar {
-  //     background-color: white;
-      
-  //     .md-button.button-over-dark, .md-button {  
-  //       color: $topbar-text-color;
-        
-  //       &:hover:not([disabled]) {
-  //         color: $topbar-text-color;
-  //         background-color: $topbar-button-background-color;         
-  //       }
-  //     }
-
-
-  //     .user-name {
-  //       color: $icon-color;
-  //     }
-      
-  //     .user-language {
-  //       color: $topbar-text-color;
-  //     }
-  //   }
-
-  //   /*START: Display clickable logo*/
-
-  //   prm-logo div.product-logo {
-  //     display:none;
-  //   }
-
-  //   prm-logo div.product-logo-local {
-  //     display: flex;
-  //   }
-  //    /*END: Display clickable logo*/
-
-
-  // }
-
-  .md-button.button-confirm {
-    color: $icon-color;
-  }
-
- /*START: Hovered topbar */
-  prm-user-area md-fab-toolbar {
-    &.md-is-open md-fab-trigger {
-      .md-fab-toolbar-background, ._md-fab-toolbar-background {
-        background-color: #d0d0d0 !important; //#466176 !important;      
-        // transition-duration: 552.7457627118644ms; 
-      }
-    }
-
-    .md-fab-action-item md-input-container {
-      &, &:hover:not([disabled]) {
-        &, md-select {
-          color: $topbar-text-color;
-        }
-      }
-
-      &:hover:not([disabled]) {
-        background-color: $topbar-button-background-color;
-      }    
-    }
-    
-  }
-
-  prm-icon {
-    md-icon,
-    md-icon.md-primoExplore-theme {
-      color: $topbar-text-color !important;
-      // transition: $swift-ease-out;
-    }
-  }
- /*END: Hovered topbar */
-
-  
 
   prm-search-bar {
     background-color: $search-bar-background-color;
@@ -122,6 +99,12 @@ header {
     .advanced-search-backdrop {
       background-color: $search-bar-background-color;
     }
+  }
+
+
+  // The default toolbar is hidden.
+  prm-topbar {  
+    visibility: hidden;
   }
 
 }

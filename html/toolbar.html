@@ -2,24 +2,27 @@
   <div class="md-toolbar-tools">
   
     <md-button class="rex-logo" alt="Home Page" aria-label="Home Page">
-      <img ng-src="{{$ctrl.logoLink}}" ng-click="$ctrl.navigateToHomePage()"/>
+      <img ng-src="{{$ctrl.logoLink}}" ng-click="$ctrl.navigation.navigateToHomePage()"/>
     </md-button>
     
     <div flex="50" hide-xs></div>
 
-    <rex-main-menu flex="50" hide-xs layout="row" layout-align="center center" class="buttons-group">
-      <md-button class="zero-margin multi-line-button" translate="{{item.i18n_label}}" aria-label="{{item.label}}" ng-click="$ctrl.navigateTo(item.url)" ng-repeat="item in $ctrl.menuList">
-        {{item.label}}
-      </md-button>  
-    </rex-main-menu>
+    <rex-main-menu flex="50" hide-xs layout="row" layout-align="center center" class="buttons-group"></rex-main-menu>
 
     <div flex="50" flex-xs="100"></div>
 
-    <div>
-      <a ng-click="$ctrl.navigateToHomePage()">
-        <img ng-src="{{$ctrl.logoLink}}"/>
-      </a>
-    </div>
+    <md-button class="md-icon-button" aria-label="{{'nui.favorites.goFavorites.tooltip' | translate}}">
+      <md-icon md-svg-icon="primo-ui:prm_pin" class="rotate-25" aria-hidden="true"></md-icon>
+      <!-- <md-icon ng-if="::(!(ctrl.iconType === 'fa'))" md-svg-icon="primo-ui:magnifying-glass" aria-hidden="true"></md-icon> -->
 
+    </md-button>
+
+    <div layout="row" layout-align="end center">
+      <rex-language-selector></rex-language-selector>
+      <md-button>Test</md-button>
+    </div>
   </div>
 </md-toolbar>
+
+
+<!-- "mypref.lang.option.da_DK"   -->
