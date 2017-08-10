@@ -69,3 +69,4 @@ angular.module('viewCustom')
 // Pre-ES2015 code.
 require('./angularLoadMonkeyPatched');
 require('./prmBriefResultAfter.component');
+require('./chat_box');
